@@ -4,7 +4,7 @@ clc
 nSec = 100; %10
 dt = 0.01;
 perturbFlag = 1;
-LSSFlag = 0;
+LSSFlag = 1;
 sigma = 10;
 beta = 8/3;
 
@@ -241,27 +241,3 @@ end
 % dJds_mod = J-temp;
 % disp(J-temp)
 % end
-
-
-%% COMMENTS
-% -Cel: wrazliwosc srednich calkowych trajektorii po zmiennych
-%   projektyowych
-% -minimalizujemy funkcjonal (24) aby aby dostac trajektorie zblizona do U
-%   i przeksztalcenie czasu postaci tau = t + C
-% -trajektoria jest zblizona, warunek poczakowy przesuniety - > z zal ergodycznosci
-%   to nie szkodzi na srednie calkowe po duzych czasach,
-%   dostajemy gladkie srednie czasowe w zaleznosci od parametrow projektowych
-% -nachylenie tych srednich calkowy w zal od par. proj. zblizone do
-%   "globalnego" nachylenia srednich calkowych trajektorii chaotycznych (w funkcji par. proj.)
-%   czyli tego co szukamy
-% -pytanie: dlaczego w (24) szukamy minimum tau i po U, a nie tylko to tau (czy U nie ma byc ustalone?)
-%  innymi slowy: czy nie chodzi nam o to aby znalesc dla danego parametru
-%  proj. (czyli ustalonego U) jego wplywu na wrazliwosc trajektorii
-% -szukajc trajektorii: wybieramy parametry poczatkowe projektowe -> dla
-%   dla nich liczymy trajekktorie (U(t)) -> zapewne jest chaotyczna ->
-%   szukamy trajektorii cienia minimalizujac funkcjonal (24) szukajac
-%   odpowiedniego przeksztalcenia czasu (czy to jest wykonalne - czy w odp malym otoczeniu jest
-%   odpowiednio gesto tych dobrych trajektorii (uklad chaotyczny)?)
-% -zakladajac ze mamy U' - ona odpowiada U dla danych par. proj., czy dla
-%   innego zestawu par. proj tez bedzie jej odpowiadala ? (przekstalcenie czasu 'globalne' ?, tzn
-%   srednia_calkowa(U'(tau(t)))) w funckji par. proj - gladka ?
